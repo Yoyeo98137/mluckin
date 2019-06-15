@@ -7,7 +7,7 @@
       <div>
         <img src="http://127.0.0.1:3000/img/shopcar.jpg">
         <p>你的购物车有点寂寞</p>
-        <button><router-link to="/">去喝一杯</router-link></button>
+        <button><router-link to="/menu">去喝一杯</router-link></button>
       </div>
     </div>
     <!-- 重用广告 -->

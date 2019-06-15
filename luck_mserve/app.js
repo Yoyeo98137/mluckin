@@ -57,6 +57,19 @@ server.get("/login",(req,res)=>{
   // 这里session后面不能直接写uid，因为session有内置的id属性
 })
 
+// 当客户端存在session的时候，通过session存储的uid查询指定用户的信息并返回
+server.get('/userLogin',(req,res)=>{
+  // var uid = req.session.uid;
+  var uid = req.query.uid;
+  var sql = `select uname,upwd from luck_user where uid = ?`;
+  pool.query(sql,[uid],(err,result)=>{
+    if(err) throw err;
+    if(uid){
+      res.send({code:1,msg:result})
+    }
+  })
+});
+
 // 查询所有订单列表
 server.get('/getAllList',(req,res)=>{
   // var uid = req.session.uid;

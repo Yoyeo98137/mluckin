@@ -2,14 +2,14 @@
   <div>
     <!-- 用户模块 -->
     <!-- 用户未登录时 -->
-    <div class="user-login" v-show="isLogin==0">
+    <div class="user-login" v-show="isLogin==null">
       <h4>请登录</h4>
       <input v-model="uname" type="text" placeholder="请输入账号">
       <input v-model="upwd" type="password" placeholder="请输入密码">
       <button @click="loadAjax" type="button" class="mui-btn mui-btn-primary mui-btn-outlined">登录</button>
     </div>
     <!-- 用户模块顶部 -->
-    <div class="user-card" v-show="isLogin==1">
+    <div class="user-card" v-show="isLogin!=null">
       <div class="user-card-left">
         <img :src="userModel[0].uimg">
         <p>{{uname}}</p>
@@ -20,14 +20,14 @@
       </div>
     </div>
     <!-- 用户页列表 -->
-    <ul class="mui-table-view" v-show="isLogin==1">
+    <ul class="mui-table-view" v-show="isLogin!=null">
       <li class="mui-table-view-cell" v-for="(item,index) in userList" :key="index">
         <!-- 加伪类放图片 -->
         <router-link to="/" class="mui-navigate-right">{{item.ucont}}</router-link>
       </li>
     </ul>
     <!-- 广告 -->
-    <my-advert v-show="isLogin==1"></my-advert>
+    <my-advert v-show="isLogin!=null"></my-advert>
   </div>
 </template>
 
@@ -91,14 +91,31 @@ export default {
     }
   },
   created() {
-    // console.log(this.isLogin)
-    // var uid = sessionStorage.getItem("uid");
+    var uid = sessionStorage.getItem("uid");
+    this.isLogin = uid;
+    console.log(this.isLogin);
+    // 当session存在时
+    if(this.isLogin!=null){
+      var url = `http://127.0.0.1:3000/userLogin`;
+      var obj = {uid}
 
-    // if(uid){
-    //   this.isLogin = 1
-    // }else{
-    //   this.isLogin = 0
-    // }
+      this.axios.get(url,{params:obj}).then(res=>{
+        // console.log(res.data.msg)
+        if(res.data.code == 1){
+          // 处理服务器的MD5函数
+          if(res.data.msg[0].upwd=='e35cf7b66449df565f93c607d5a81d09'){
+            res.data.msg[0].upwd = 456789;
+          }else if(res.data.msg[0].upwd=='e10adc3949ba59abbe56e057f20f883e'){
+            res.data.msg[0].upwd = 123456;
+          }
+          console.log(res.data.msg[0].uname,
+          res.data.msg[0].upwd
+          );
+          this.uname = res.data.msg[0].uname;
+          this.upwd = res.data.msg[0].upwd;
+        }
+      })
+    }
   },
   components: {
     myAdvert
