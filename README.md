@@ -1,7 +1,7 @@
 # mluckin
 仿瑞幸咖啡app 移动端页面 Vue
 ## 技术栈
-Vue.js(vue-router、axios) + Scss + Mint-ui + MUI + Node.js + MySQL<br>
+Vue.js(脚手架、vue-router、axios) + Scss + Mint-ui + MUI + Node.js + MySQL<br>
 Node.js > 8<br>
 Vue 3.7.0
 ## 运行项目
