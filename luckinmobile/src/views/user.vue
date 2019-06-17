@@ -72,7 +72,7 @@ export default {
          return;
       }
 
-      var url = `http://127.0.0.1:3000/login`;
+      var url = `login`;
       var obj = {uname:n,upwd:p}
 
       this.axios.get(url,{params:obj}).then(res=>{
@@ -96,7 +96,7 @@ export default {
     console.log(this.isLogin);
     // 当session存在时
     if(this.isLogin!=null){
-      var url = `http://127.0.0.1:3000/userLogin`;
+      var url = `userLogin`;
       var obj = {uid}
 
       this.axios.get(url,{params:obj}).then(res=>{

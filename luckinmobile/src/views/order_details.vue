@@ -81,7 +81,7 @@ export default {
     // ajax请求
     loadList(){
       // console.log(this.id);
-      this.axios.get('http://127.0.0.1:3000/getList',
+      this.axios.get('getList',
       {
         params:{ id:this.id }
       }

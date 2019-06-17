@@ -60,9 +60,7 @@ export default {
     loadList(){
       var uid = sessionStorage.getItem("uid");
       if(uid) console.log(uid);
-      var url =`
-        http://127.0.0.1:3000/getAllList
-      `;
+      var url =`getAllList`;
       // 去除url中的空格
       // url = url.replace(/\s*/g,"");
       url = url.trim();

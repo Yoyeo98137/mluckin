@@ -209,7 +209,7 @@ export default {
           var id = e.target.dataset.id;
           console.log(id)
           var url = `
-            http://127.0.0.1:3000/removeCarItem?id=${id}
+            removeCarItem?id=${id}
           `;
           this.axios.get(url).then(result=>{
             if(result.data.code==1){
@@ -230,9 +230,7 @@ export default {
     loadAjax(){
       var uid = sessionStorage.getItem("uid");
       // if(uid) console.log(uid);
-      var url = `
-        http://127.0.0.1:3000/getCart
-      `;
+      var url = `getCart`;
       url = url.trim();
       this.axios.get(url,{
         params: {uid}

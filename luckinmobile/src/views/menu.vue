@@ -99,7 +99,7 @@ export default {
     addShop(e){
       var num = e.target.dataset.count;
       // console.log(this.mcontList[num].cofName,this.mcontList[num].cofEng,this.mcontList[num].cofPri);
-      var url = "http://127.0.0.1:3000/addCart";
+      var url = "addCart";
       var cofName = this.mcontList[num].cofName;
       var cofEng = this.mcontList[num].cofEng;
       var cofPri = this.mcontList[num].cofPri;

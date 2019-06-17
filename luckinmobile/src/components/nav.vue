@@ -71,9 +71,7 @@ export default {
     },
     loadAjax(){
       var uid = sessionStorage.getItem("uid");
-      var url = `
-          http://127.0.0.1:3000/getCart
-        `;
+      var url = `getCart`;
       url = url.trim();
       this.axios.get(url,{
         params: {uid}

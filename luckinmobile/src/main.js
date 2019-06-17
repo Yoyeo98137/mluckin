@@ -13,7 +13,8 @@ import '../lib/mui/css/icons-extra.css'
 // import '../lib/mui/js/mui.min.js'
 import axios from 'axios'
 // 配置跨域选项
-axios.defaults.withCredentials=true
+axios.defaults.withCredentials=true;
+axios.defaults.baseURL = 'http://127.0.0.1:3000/';
 // // 
 // axios.defaults.baseURL="http://127.0.0.1:3000/"
 // 将axios配置到Vue实例中
