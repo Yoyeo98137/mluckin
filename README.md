@@ -9,6 +9,7 @@ Vue 3.7.0
     cd mluckin
     cd luck_mserve  // 切换后端文件夹下载后端依赖
     npm install
+    cd ..
     cd luckinmobile  // 切换前端文件夹下载前端依赖
     npm install
     npm run serve
