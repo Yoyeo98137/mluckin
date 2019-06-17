@@ -30,6 +30,11 @@ Vue 3.7.0
 × 菜单页监听商品滚动位置并执行选项卡切换<br>
 × 购物车商品数量加减、支付功能<br>
 × 猜你喜欢随机显示的商品没有实现去重
+## 页面预览图
+![image](https://github.com/Yoyeo98137/mluckin/blob/master/img/01.png)
+![image](https://github.com/Yoyeo98137/mluckin/blob/master/img/02.png)
+![image](https://github.com/Yoyeo98137/mluckin/blob/master/img/03.png)
+![image](https://github.com/Yoyeo98137/mluckin/blob/master/img/04.png)
 ## 制作目的
 加深常用功能购物车的做法实践<br>
 提升移动端页面制作能力<br>
