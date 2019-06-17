@@ -14,7 +14,7 @@ Vue 3.7.0
     npm install
     // 先打开服务器还有mysql(本人用的xampp)
     // 需要先导入数据库，luck_mserve下的mluck.sql文件
-    // 服务器端口3000
+    // vue组件的一些数据和图片从服务器http://127.0.0.1:3000获取
     npm run serve
     访问 http://localhost:8080
     // 用户登录  tom 456789/Arser 123456
