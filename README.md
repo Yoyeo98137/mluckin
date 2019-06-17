@@ -13,6 +13,8 @@ Vue 3.7.0
     cd luckinmobile  // 切换前端文件夹下载前端依赖
     npm install
     // 先打开服务器还有mysql(本人用的xampp)
+    // 需要先导入数据库，luck_mserve下的mluck.sql文件
+    // 服务器端口3000
     npm run serve
     访问 http://localhost:8080
     // 用户登录  tom 456789/Arser 123456
