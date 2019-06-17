@@ -7,7 +7,11 @@ Vue 3.7.0
 ## 运行项目
     git clone https://github.com/Yoyeo98137/mluckin.git
     cd mluckin
+    cd luck_mserve  // 切换后端文件夹下载后端依赖
     npm install
+    cd luckinmobile  // 切换前端文件夹下载前端依赖
+    npm install
+    npm run serve
     访问 http://localhost:8080
 ## 功能实现
 √ 轮播图、组件复用<br>
