@@ -12,8 +12,10 @@ Vue 3.7.0
     cd ..
     cd luckinmobile  // 切换前端文件夹下载前端依赖
     npm install
+    // 先打开服务器还有mysql(本人用的xampp)
     npm run serve
     访问 http://localhost:8080
+    // 用户登录  tom 456789/Arser 123456
 ## 功能实现
 √ 轮播图、组件复用<br>
 √ 菜单页选项卡切换、点击商品右下角 + 号添加购物车<br>
